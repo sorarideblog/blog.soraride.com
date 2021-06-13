@@ -1,5 +1,5 @@
 import type { GatsbyConfig } from 'gatsby'
-const dotenv = require('dotenv')
+import dotenv from 'dotenv'
 
 if (process.env.ENVIRONMENT !== 'production') {
   dotenv.config()
@@ -15,12 +15,12 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-sass',
     {
-      resolve: "gatsby-source-contentful",
-        options: {
-          spaceId: process.env.spaceId,
-          accessToken: process.env.accessToken,
-        },
-    }  
-  ],
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.spaceId,
+        accessToken: process.env.accessToken
+      }
+    }
+  ]
 }
 export default config

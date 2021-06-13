@@ -19,25 +19,34 @@ const Page: FC = () => {
         }
       }
     }
-    `)
+  `)
 
-    return (
-  <Layout>
-    <h1>Home</h1>
-    <p>Hello, GatsbyJS!</p>
+  return (
+    <Layout>
+      <h1>ホーム</h1>
+      <p>
+        This blog is created by{' '}
+        <a href="https://twitter.com/sorarideblog/">@sorarideblog</a>.
+      </p>
 
-    {data.allContentfulBlogPost.nodes.map(({ id, postTitle, text }) => (
-      <h3 key={id}>
-        {postTitle}
-        <p>
-          {text.text}
-        </p>
-      </h3>
-    ))}
+      <article>
+        <ul>
+          {data.allContentfulBlogPost.nodes.map(({ id, postTitle, text }) => (
+            <li key={id}>
+              <Link to={'/post/' + id}>
+                <div className="post">
+                  <h3>{postTitle}</h3>
+                  <p>{text.text}</p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </article>
 
-    <Link to="/about">About this blog</Link>
-  </Layout>
-    )
+      <Link to="/about">このブログについて</Link>
+    </Layout>
+  )
 }
 
 export default Page
