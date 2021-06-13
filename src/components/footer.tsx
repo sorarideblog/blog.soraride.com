@@ -4,13 +4,13 @@ import { Link } from 'gatsby'
 
 export const Footer: FC = () => (
   <footer>
-    <p>&copy; John Doe</p>
+    <p>&copy; Sorarideblog</p>
     <ul>
       <li>
         <Link to="/about">About</Link>
       </li>
       <li>
-        <a href="mailto:doe@example.com">Contact</a>
+        <a href="mailto:sorarideblog@gmail.com">Contact</a>
       </li>
     </ul>
   </footer>
