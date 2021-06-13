@@ -38,4 +38,13 @@ footer {
 
 .content {
   margin: 1rem;
+
+  ul {
+    // display: flex;
+    list-style-type: none;
+  }
+
+  .post {
+    margin: 1rem;
+  }
 }
