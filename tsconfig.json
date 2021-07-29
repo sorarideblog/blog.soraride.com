@@ -1,14 +1,19 @@
 {
   "include": [
     "./src/**/*",
-    "./gatsby-*.ts"
+    "./gatsby-*.ts", 
+    "gatsby-node.js",
+    "./types/**/*",
+    "./gatsby-node/**/*"
   ],
   "compilerOptions": {
-    "target": "es2019",
+    "target": "esnext",
     "module": "commonjs",
-    "lib": ["dom", "es2017"],
+    "lib": ["dom", "esnext"],
     "jsx": "react",
     "strict": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
     "esModuleInterop": true,
     "baseUrl": "."
   }
