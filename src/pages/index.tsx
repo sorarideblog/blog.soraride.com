@@ -2,9 +2,14 @@ import React from 'react'
 import type { FC } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Layout } from '../components/layout'
+import { useMediaQuery } from 'react-responsive'
 import '../styles/index.scss'
 
 const Page: FC = () => {
+  const isMobile: boolean = useMediaQuery({
+    query: '(max-width: 1224px)'
+  })
+
   const data = useStaticQuery(graphql`
     query MyQuery {
       allContentfulBlogPost {
@@ -23,11 +28,11 @@ const Page: FC = () => {
 
   return (
     <Layout>
-      <h1>ホーム</h1>
-      <p>
+      <h2>ホーム</h2>
+      {/* <p>
         This blog is created by{' '}
         <a href="https://twitter.com/sorarideblog/">@sorarideblog</a>.
-      </p>
+      </p> */}
 
       <article>
         <ul>
