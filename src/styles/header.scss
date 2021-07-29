@@ -1,0 +1,25 @@
+.navbar {
+  background-color: rgb(240, 248, 248);
+}
+
+#header {
+  background-color: rgb(240, 248, 248);
+  // display: flex;
+  // flex-direction: row;
+
+  a {
+    color: #353b41;
+    text-decoration: none;
+  }
+
+  .header-contents {
+    // display: flex;
+
+    .header-content {
+      color: rgb(66, 66, 66);
+      padding-left: 1rem;
+      font-size: 1.4rem;
+      font-style: italic;
+    }
+  }
+}

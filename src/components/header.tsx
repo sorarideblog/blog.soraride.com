@@ -2,12 +2,13 @@ import React from 'react'
 import type { FC } from 'react'
 import { Link } from 'gatsby'
 import { Navbar, Nav, Container } from 'react-bootstrap'
-import '../styles/index.scss'
+import '../styles/header.scss'
 
 export const Header: FC = () => (
   <Navbar
+    fixed="top"
     collapseOnSelect
-    expand="lg"
+    expand="md"
     id="header"
     className="burger burger-arrow"
     bg="light"
@@ -24,7 +25,7 @@ export const Header: FC = () => (
             <Link to="/about">About</Link>
           </Nav.Link>
           <Nav.Link className="header-content">
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
