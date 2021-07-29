@@ -9,10 +9,10 @@ export default function Post({ pageContext }: any) {
   return (
     <Layout>
       <div className="post-header">
-        <h1>{postTitle}</h1>
+        <h2>{postTitle}</h2>
         <p className="post-date">{updatedAt}</p>
       </div>
-      <div className="post-body">{body}</div>
+      <article className="post-body">{body}</article>
     </Layout>
   )
 }
