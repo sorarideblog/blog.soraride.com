@@ -41,7 +41,7 @@ export const Footer: FC = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/contact"></Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
