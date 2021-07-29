@@ -15,6 +15,7 @@ export const Layout: FC = ({ children }) => (
       <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script> */}
     </Helmet>
 
+    <div id="topSpacer"></div>
     <Header></Header>
     <div id="main-aside-wrapper">
       <main>

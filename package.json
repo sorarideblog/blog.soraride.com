@@ -9,7 +9,8 @@
     "stylelint": "stylelint 'src/**/*.scss'",
     "stylelint:fix": "stylelint --fix 'src/**/*.scss'",
     "dev": "ts-node ./node_modules/.bin/gatsby develop",
-    "build": "ts-node ./node_modules/.bin/gatsby build"
+    "build": "ts-node ./node_modules/.bin/gatsby build",
+    "serve": "ts-node ./node_modules/.bin/gatsby serve"
   },
   "keywords": [],
   "author": "soraride <sorarideblog@gmail.com>",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/react": "^16.14.8",
     "@types/react-dom": "16.9.9",
+    "@types/react-helmet": "^6.1.2",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
     "eslint": "^7.27.0",

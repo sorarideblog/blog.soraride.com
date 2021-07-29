@@ -10,61 +10,25 @@ html {
   font-family: sans-serif;
 }
 
+body {
+  background-color: rgb(249, 249, 255);
+}
+
 @media screen and (min-width: 560px) {
   .wrapper {
     margin: 0;
   }
 }
 
-footer {
-  font-size: 1.5rem;
-  color: white;
-  padding: 3rem 2rem;
-  background: #52636d;
-  justify-content: space-between;
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  ul {
-    display: flex;
-    list-style-type: none;
-  }
-
-  li:not(:first-child) {
-    margin-left: 1rem;
-    text-decoration: none;
-  }
-
-  #copy {
-    font-size: 1.1rem;
-    text-align: center;
-    color: rgb(180, 180, 180);
-  }
+#topSpacer {
+  height: 70px;
 }
 
-#header {
-  background-color: rgb(240, 248, 248);
-  // display: flex;
-  // flex-direction: row;
-
-  a {
-    color: #353b41;
-    text-decoration: none;
-  }
-
-  .header-contents {
-    // display: flex;
-
-    .header-content {
-      color: rgb(66, 66, 66);
-      padding-left: 1rem;
-      font-size: 1.4rem;
-      font-style: italic;
-    }
-  }
+.post {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgb(67 133 187 / 7%);
 }
 
 .navbar-light .navbar-toggler {
@@ -84,7 +48,6 @@ button:focus {
   flex-direction: row;
 
   main {
-    background-color: rgb(249, 249, 255);
     flex-grow: 1;
   }
 
@@ -119,5 +82,9 @@ button:focus {
 
   .post {
     margin: 1rem;
+
+    a {
+      text-decoration: none;
+    }
   }
 }

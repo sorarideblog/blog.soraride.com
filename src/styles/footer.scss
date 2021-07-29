@@ -1,24 +1,83 @@
-#footerContents {
-  // display: flex;
-  max-width: 500px;
-  margin: auto;
+$footerFontColor: rgb(201, 201, 201);
+$hoverFontColor: rgb(167, 167, 167);
 
-  #blogTitle {
-    margin: 1rem;
+footer {
+  font-size: 1.5rem;
+  color: $footerFontColor;
+  padding: 3rem 2rem;
+  background: #52636d;
+  justify-content: space-between;
 
-    #englishTitle {
-      font-size: 2rem;
-    }
-    #japaneseTitle {
-      text-align: left;
-      font-size: 1rem;
-      color: rgb(201, 201, 201);
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  li:not(:first-child) {
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+
+  #copy {
+    font-size: 1.1rem;
+    text-align: center;
+    color: $footerFontColor;
+  }
+  #footerContents {
+    // display: flex;
+    max-width: 20rem;
+    margin: auto;
+    color: $footerFontColor;
+
+    #blogTitle {
+      margin: 1rem;
+
+      #englishTitle {
+        text-align: left;
+        font-size: 2rem;
+      }
+      #japaneseTitle {
+        text-align: left;
+        font-size: 1.2rem;
+        color: $footerFontColor;
+        margin-bottom: 1rem;
+      }
     }
     #follow {
       text-align: center;
-      color: rgb(201, 201, 201);
+      color: $footerFontColor;
+      margin-bottom: 1rem;
+
       a {
         margin: 0.5rem;
+
+        svg {
+          fill: white;
+          width: 40px;
+
+          &:hover {
+            fill: $hoverFontColor;
+          }
+        }
+      }
+    }
+
+    #footerNav {
+      color: $footerFontColor;
+      ul {
+        li {
+          a {
+            margin: 0.5rem;
+            text-decoration: none;
+            color: $footerFontColor;
+            font-size: 1.2rem;
+
+            &:visited {
+              text-decoration: none;
+              color: $hoverFontColor;
+            }
+          }
+        }
       }
     }
   }

@@ -39,12 +39,14 @@ const Page: FC = () => {
           {data.allContentfulBlogPost.nodes.map(
             ({ id, postTitle, text }: MapType) => (
               <li key={id}>
-                <Link to={'/post/' + id}>
-                  <div className="post">
-                    <h3>{postTitle}</h3>
-                    <p>{text.text}</p>
-                  </div>
-                </Link>
+                <div className="post">
+                  <Link to={'/post/' + id}>
+                    <div>
+                      <h3>{postTitle}</h3>
+                      <p>{text.text}</p>
+                    </div>
+                  </Link>
+                </div>
               </li>
             )
           )}
