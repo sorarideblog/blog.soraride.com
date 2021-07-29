@@ -44,9 +44,14 @@ header {
   display: flex;
   flex-direction: row;
 
+  main {
+    background-color: rgb(249, 249, 255);
+    flex-grow: 1;
+  }
+
   aside {
     max-width: 20rem;
-    background-color: rgb(234, 255, 203);
+    background-color: rgb(238, 238, 238);
     padding: 1rem;
 
     #sponser-link {
@@ -65,16 +70,17 @@ header {
   }
 }
 
-main {
-  background-color: rgb(249, 249, 255);
-}
-
 footer {
   font-size: 1.5rem;
   color: white;
   padding: 3rem 2rem;
   background: #52636d;
   justify-content: space-between;
+
+  &a {
+    text-decoration: none;
+    color: white;
+  }
 
   ul {
     display: flex;
@@ -84,10 +90,6 @@ footer {
   li:not(:first-child) {
     margin-left: 1rem;
     text-decoration: none;
-  }
-  a {
-    text-decoration: none;
-    color: white;
   }
 
   #copy {

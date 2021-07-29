@@ -10,9 +10,12 @@ const config: GatsbyConfig = {
     title: 'My Blog',
     author: 'soraride',
     description: 'ブログ',
-    email: 'sorarideblog@gmail.com'
+    email: 'sorarideblog@gmail.com',
+    // If you didn't use the resolveSiteUrl option this needs to be set: for gatsby-plugin-sitemap
+    siteUrl: `https://sorarideblog.com`
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-contentful',
