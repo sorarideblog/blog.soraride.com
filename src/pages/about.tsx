@@ -5,8 +5,8 @@ import { Layout } from '../components/layout'
 
 const Page: FC = () => (
   <Layout>
-    <h1>About</h1>
-    <p>GatsbyJSでできたブログやよ〜</p>
+    <h2>このブログについて</h2>
+    <p></p>
     <Link to="/">Home</Link>
   </Layout>
 )
