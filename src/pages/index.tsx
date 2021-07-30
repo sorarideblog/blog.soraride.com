@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Layout } from '../components/layout'
 import { useMediaQuery } from 'react-responsive'
 import '../styles/index.scss'
+import SEO from '../components/seo'
 
 const Page: FC<QueryDataType> = ({ data }) => {
   // const isMobile: boolean = useMediaQuery({
@@ -12,6 +13,7 @@ const Page: FC<QueryDataType> = ({ data }) => {
 
   return (
     <Layout>
+      <SEO></SEO>
       <h2>記事一覧</h2>
       <article id="articles">
         <ul>
