@@ -41,7 +41,32 @@ const config: GatsbyConfig = {
         footnotes: true,
         pedantic: true,
         gfm: true,
-        plugins: []
+        plugins: [
+          `gatsby-remark-autolink-headers`,
+          // gatsby-remark-prismjs を使うときには
+          // gatsby-remark-autolink-headers よりも後ろに書く
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false
+            }
+          },
+          `gatsby-remark-check-links`,
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              // デフォルトは _blank
+              target: '_self',
+              // デフォルトは nofollow noopener noreferrer
+              rel: 'noopener noreferrer'
+            }
+          },
+          `gatsby-remark-code-titles`
+        ]
       }
     },
     {

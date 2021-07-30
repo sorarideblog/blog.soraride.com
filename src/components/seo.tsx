@@ -3,12 +3,13 @@ import React, { FC } from 'react'
 import { Helmet } from 'react-helmet'
 
 const SEO: FC = () => {
+  const title = `Jun's Blog`
   const description = 'じゅんの手作りブログ。技術系とか。製作物とか。'
 
   return (
     <Helmet
       htmlAttributes={{ lang: 'ja-jp' }}
-      title={`Jun's Blog`}
+      title={title}
       titleTemplate={`%s`}
       meta={[
         {
