@@ -6,30 +6,20 @@ import '@animated-burgers/burger-slip/dist/styles.css' // drawer.scssの前に�
 import '../styles/header.scss'
 import {
   AppBar,
-  Button,
   Container,
   Toolbar,
-  Typography,
   SwipeableDrawer,
-  ListItem,
   List,
-  ListItemText,
-  useTheme,
-  withStyles,
   makeStyles,
-  createStyles,
-  Theme,
   Divider
 } from '@material-ui/core'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-// const useStyles = makeStyles((theme: Theme) =>
-//   createStyles({
-//     title: {
-//       flexGrow: 1
-//     }
-//   })
-// )
+const useStyles = makeStyles({
+  paper: {
+    background: 'rgb(240, 248, 248)'
+  }
+})
 
 export const Header: FC = () => {
   const [isDrawerOpen, setDrawerOpen] = React.useState(false)
@@ -39,11 +29,12 @@ export const Header: FC = () => {
   }
   const isMobile = useMediaQuery('(max-width:600px)')
 
-  // const classes = useStyles()
+  const classes = useStyles()
 
   const drawer = (
     <React.Fragment>
       <SwipeableDrawer
+        classes={{ paper: classes.paper }}
         anchor="top"
         open={isDrawerOpen}
         onClose={toggleDrawer}
