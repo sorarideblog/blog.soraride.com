@@ -4,7 +4,8 @@ import { Layout } from '../components/layout'
 import SEO from '../components/seo'
 
 export default function Post({ pageContext }: any) {
-  const { postTitle, updatedAt, slug, description } = pageContext.post
+  const { postTitle, updatedAt, slug } = pageContext.post
+  const description = pageContext.post.description.description
   const body = pageContext.post.body.childMarkdownRemark.html
 
   return (
