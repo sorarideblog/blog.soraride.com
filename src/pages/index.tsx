@@ -5,26 +5,10 @@ import { Layout } from '../components/layout'
 import { useMediaQuery } from 'react-responsive'
 import '../styles/index.scss'
 
-const Page: FC = () => {
-  const isMobile: boolean = useMediaQuery({
-    query: '(max-width: 1224px)'
-  })
-
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      allContentfulBlogPost {
-        nodes {
-          postTitle
-          updatedAt
-          id
-          text {
-            id
-            text
-          }
-        }
-      }
-    }
-  `)
+const Page: FC<MapType> = ({ data }) => {
+  // const isMobile: boolean = useMediaQuery({
+  //   query: '(max-width: 1224px)'
+  // })
 
   return (
     <Layout>
@@ -37,7 +21,7 @@ const Page: FC = () => {
       <article id="articles">
         <ul>
           {data.allContentfulBlogPost.nodes.map(
-            ({ id, postTitle, text }: MapType) => (
+            ({ id, postTitle, text }: BlogPost) => (
               <li key={id}>
                 {/* <div className="post"> */}
                 <Link to={'/post/' + id}>
@@ -57,11 +41,18 @@ const Page: FC = () => {
 }
 
 // 暫定で作ってみた型
-type MapType = {
+type BlogPost = {
   id: string
   postTitle: string
   text: {
     text: string
+  }
+}
+type MapType = {
+  data: {
+    allContentfulBlogPost: {
+      nodes: BlogPost[]
+    }
   }
 }
 

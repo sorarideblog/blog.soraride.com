@@ -35,6 +35,16 @@ const config: GatsbyConfig = {
         name: `images`,
         path: path.join(__dirname, `src`, `images`)
       }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        plugins: []
+      }
     }
   ]
 }
