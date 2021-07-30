@@ -18,16 +18,28 @@ export const Footer: FC = () => {
           <div id="japaneseTitle">じゅんのブログ</div>
         </div>
         <div id="follow">
-          <a href="https://twitter.com/sorarideblog">
+          <a
+            href="https://twitter.com/sorarideblog"
+            target="_blank"
+            rel="noreferrer"
+          >
             <TwitterIcon />
           </a>
-          <a href="https://zenn.dev/soraride">
+          <a href="https://zenn.dev/soraride" target="_blank" rel="noreferrer">
             <ZennIcon />
           </a>
-          <a href="https://github.com/sorarideblog">
+          <a
+            href="https://github.com/sorarideblog"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GithubIcon />
           </a>
-          <a href="https://qiita.com/sorarideblog">
+          <a
+            href="https://qiita.com/sorarideblog"
+            target="_blank"
+            rel="noreferrer"
+          >
             <QiitaIcon />
           </a>
         </div>

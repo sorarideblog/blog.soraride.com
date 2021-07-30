@@ -17,7 +17,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles({
   paper: {
-    background: 'rgb(240, 248, 248)'
+    background: 'rgb(240, 248, 248)',
+    height: 'fit-content'
   }
 })
 
