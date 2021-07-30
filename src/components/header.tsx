@@ -57,7 +57,7 @@ export const Header: FC = () => {
             </Link>
             <Divider></Divider>
 
-            <Link to="contact" className="drawer-link">
+            <Link to="/contact" className="drawer-link">
               Contact
             </Link>
           </List>
