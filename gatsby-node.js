@@ -11,10 +11,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           edges {
             node {
               updatedAt(locale: "ja-JP", formatString: "YYYY年MM月DD日")
-              id
               postTitle
-              text {
-                text
+              id
+              body {
+                childMarkdownRemark {
+                  html
+                }
+              }
+              slug
+              description {
+                description
               }
             }
           }
@@ -32,7 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   edges.forEach(edge => {
     createPage({
-      path: `/post/${edge.node.id}/`,
+      path: `/post/${edge.node.slug}/`,
       component: path.resolve('./src/templates/post.tsx'),
       context: { post: edge.node }
     })
