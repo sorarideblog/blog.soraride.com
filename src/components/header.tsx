@@ -1,55 +1,108 @@
 import React from 'react'
 import type { FC } from 'react'
 import { Link } from 'gatsby'
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import Burger from '@animated-burgers/burger-slip'
+import '@animated-burgers/burger-slip/dist/styles.css' // drawer.scssの前に読み込む
 import '../styles/header.scss'
+import {
+  AppBar,
+  Button,
+  Container,
+  Toolbar,
+  Typography,
+  SwipeableDrawer,
+  ListItem,
+  List,
+  ListItemText,
+  useTheme,
+  withStyles,
+  makeStyles,
+  createStyles,
+  Theme,
+  Divider
+} from '@material-ui/core'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-export const Header: FC = () => (
-  <Navbar
-    fixed="top"
-    collapseOnSelect
-    expand="md"
-    id="header"
-    className="burger burger-arrow"
-    bg="light"
-    variant="light"
-  >
-    <Container>
-      <Navbar.Brand id="blog-title">
-        <Link to="/">そららいどのブログ</Link>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto header-contents">
-          <Nav.Link className="header-content">
-            <Link to="/about">About</Link>
-          </Nav.Link>
-          <Nav.Link className="header-content">
-            <Link to="/contact">Contact</Link>
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
+// const useStyles = makeStyles((theme: Theme) =>
+//   createStyles({
+//     title: {
+//       flexGrow: 1
+//     }
+//   })
+// )
 
-  // <header id="header">
-  //   <Navbar>
-  //     <Container>
-  //       <Navbar.Brand id="blog-title">
-  //         <Link to="/">そららいどのブログ</Link>
-  //       </Navbar.Brand>
-  //       <Nav className="me-auto header-contents">
-  //         <span>
-  //           <Link to="/">About</Link>
-  //         </span>
-  //         <span>
-  //           <Link to="/">Articles</Link>
-  //         </span>
-  //         <span>
-  //           <Link to="/">Contact</Link>
-  //         </span>
-  //       </Nav>
-  //     </Container>
-  //   </Navbar>
-  // </header>
-)
+export const Header: FC = () => {
+  const [isDrawerOpen, setDrawerOpen] = React.useState(false)
+  const toggleDrawer = () => {
+    const currentState: boolean = isDrawerOpen
+    setDrawerOpen(!currentState)
+  }
+  const isMobile = useMediaQuery('(max-width:600px)')
+
+  // const classes = useStyles()
+
+  const drawer = (
+    <React.Fragment>
+      <SwipeableDrawer
+        anchor="top"
+        open={isDrawerOpen}
+        onClose={toggleDrawer}
+        onOpen={toggleDrawer}
+        id="drawer"
+      >
+        <div
+          role="presentation"
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <List>
+            <Link to="/" className="drawer-link">
+              Top
+            </Link>
+            <Divider></Divider>
+            <Link to="/about" className="drawer-link">
+              Works
+            </Link>
+            <Divider></Divider>
+
+            <Link to="contact" className="drawer-link">
+              Contact
+            </Link>
+          </List>
+        </div>
+      </SwipeableDrawer>
+    </React.Fragment>
+  )
+
+  return (
+    <div>
+      {drawer}
+      <AppBar id="app-bar" position="fixed">
+        <Toolbar id="header">
+          <Link to="/" id="blog-title">
+            <strong>{`< Jun's Blog />`}</strong>
+          </Link>
+          {isMobile ? (
+            <Burger
+              id="burger-button"
+              onClick={toggleDrawer}
+              isOpen={isDrawerOpen}
+            />
+          ) : (
+            <Container className="header-contents">
+              <Link to="/" className="header-content">
+                Top
+              </Link>
+              <Link to="/about" className="header-content">
+                Works
+              </Link>
+              <Link to="/contact" className="header-content">
+                Contact
+              </Link>
+            </Container>
+          )}
+        </Toolbar>
+      </AppBar>
+    </div>
+  )
+}

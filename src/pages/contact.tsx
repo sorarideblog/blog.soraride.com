@@ -5,9 +5,9 @@ import { Layout } from '../components/layout'
 
 const Page: FC = () => (
   <Layout>
-    <h2>ブログの著者</h2>
+    <h2>自己紹介</h2>
     <p></p>
-    <Link to="/">Home</Link>
+    <Link to="/">TOPページへ</Link>
   </Layout>
 )
 

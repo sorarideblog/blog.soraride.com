@@ -1,25 +1,61 @@
-.navbar {
-  background-color: rgb(240, 248, 248);
+$textColor: #353b41;
+$hoverColor: black;
+
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
+  background-color: $textColor;
+}
+
+#app-bar {
+  box-shadow: none;
+  border-bottom: solid $textColor 1px;
 }
 
 #header {
   background-color: rgb(240, 248, 248);
-  // display: flex;
+  display: flex;
   // flex-direction: row;
+  filter: none;
 
   a {
-    color: #353b41;
+    color: $textColor;
     text-decoration: none;
   }
 
-  .header-contents {
-    // display: flex;
+  #blog-title {
+    width: 13rem;
+    font-size: 1.5rem;
 
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+
+  .header-contents {
     .header-content {
-      color: rgb(66, 66, 66);
+      color: $textColor;
       padding-left: 1rem;
       font-size: 1.4rem;
       font-style: italic;
+
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+  }
+}
+
+#drawer {
+  .drawer-link {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: $textColor;
+    text-decoration: none;
+
+    &:visited {
+      color: $textColor;
     }
   }
 }

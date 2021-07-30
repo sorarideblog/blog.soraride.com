@@ -5,51 +5,28 @@ import { Layout } from '../components/layout'
 import { useMediaQuery } from 'react-responsive'
 import '../styles/index.scss'
 
-const Page: FC = () => {
-  const isMobile: boolean = useMediaQuery({
-    query: '(max-width: 1224px)'
-  })
-
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      allContentfulBlogPost {
-        nodes {
-          postTitle
-          updatedAt
-          id
-          text {
-            id
-            text
-          }
-        }
-      }
-    }
-  `)
+const Page: FC<QueryDataType> = ({ data }) => {
+  // const isMobile: boolean = useMediaQuery({
+  //   query: '(max-width: 1224px)'
+  // })
 
   return (
     <Layout>
       <h2>記事一覧</h2>
-      {/* <p>
-        This blog is created by{' '}
-        <a href="https://twitter.com/sorarideblog/">@sorarideblog</a>.
-      </p> */}
-
       <article id="articles">
         <ul>
-          {data.allContentfulBlogPost.nodes.map(
-            ({ id, postTitle, text }: MapType) => (
-              <li key={id}>
-                {/* <div className="post"> */}
-                <Link to={'/post/' + id}>
-                  <div className="post">
-                    <h3>{postTitle}</h3>
-                    <p>{text.text}</p>
-                  </div>
-                </Link>
-                {/* </div> */}
-              </li>
-            )
-          )}
+          {data.allContentfulBlogPost.edges.map(({ node }: BlogPost) => (
+            <li key={node.id}>
+              {/* <div className="post"> */}
+              <Link to={'/post/' + node.id}>
+                <div className="post">
+                  <h3>{node.postTitle}</h3>
+                  <p>{node.text.text}</p>
+                </div>
+              </Link>
+              {/* </div> */}
+            </li>
+          ))}
         </ul>
       </article>
     </Layout>
@@ -57,12 +34,38 @@ const Page: FC = () => {
 }
 
 // 暫定で作ってみた型
-type MapType = {
-  id: string
-  postTitle: string
-  text: {
-    text: string
+type BlogPost = {
+  node: {
+    id: string
+    postTitle: string
+    text: {
+      text: string
+    }
   }
 }
+type QueryDataType = {
+  data: {
+    allContentfulBlogPost: {
+      edges: BlogPost[]
+    }
+  }
+}
+
+export const query = graphql`
+  query MyQuery {
+    allContentfulBlogPost {
+      edges {
+        node {
+          id
+          updatedAt
+          postTitle
+          text {
+            text
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Page
