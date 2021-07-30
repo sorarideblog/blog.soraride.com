@@ -31,8 +31,9 @@ a {
 .post {
   padding: 1rem;
   background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgb(67 133 187 / 7%);
+  border-radius: 0.5rem;
+  border: solid dimgray 1px;
+  // box-shadow: 0 2px 4px rgb(67 133 187 / 7%);
 }
 
 .navbar-light .navbar-toggler {
