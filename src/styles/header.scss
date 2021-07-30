@@ -17,6 +17,7 @@ $hoverColor: black;
   display: flex;
   // flex-direction: row;
   filter: none;
+  width: wrap;
 
   a {
     color: $textColor;
@@ -26,6 +27,7 @@ $hoverColor: black;
   #blog-title {
     width: 15rem;
     font-size: 1.3rem;
+    flex-grow: 1;
 
     &:hover {
       color: $hoverColor;
@@ -33,10 +35,10 @@ $hoverColor: black;
   }
 
   #burger-button {
-    position: absolute;
+    position: relative;
     right: 0;
     box-sizing: border-box;
-    margin: 1rem;
+    flex-grow: 0;
   }
 
   .header-contents {
