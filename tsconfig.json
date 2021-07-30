@@ -3,6 +3,7 @@
     "./src/**/*",
     "./gatsby-*.ts", 
     "gatsby-node.js",
+    "gatsby-browser.js",
     "./types/**/*",
     "./gatsby-node/**/*"
   ],
