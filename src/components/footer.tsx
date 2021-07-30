@@ -14,13 +14,12 @@ export const Footer: FC = () => {
     <footer>
       <div id="footerContents">
         <div id="blogTitle">
-          <div id="englishTitle">Soraride&apos;s Blog</div>
-          <div id="japaneseTitle">そららいどのブログ</div>
+          <div id="englishTitle">{`< Jun's Blog />`}</div>
+          <div id="japaneseTitle">じゅんのブログ</div>
         </div>
         <div id="follow">
           <a href="https://twitter.com/sorarideblog">
             <TwitterIcon />
-            {/* <img src={TwitterIcon} alt="" width={iconSize} /> */}
           </a>
           <a href="https://zenn.dev/soraride">
             <ZennIcon />
@@ -32,18 +31,16 @@ export const Footer: FC = () => {
             <QiitaIcon />
           </a>
         </div>
-        <div id="footerNav">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+        <div id="footer-nav">
+          <Link to="/" className="footer-link">
+            Top
+          </Link>
+          <Link to="/works" className="footer-link">
+            Works
+          </Link>
+          <Link to="/contact" className="footer-link">
+            Contact
+          </Link>
         </div>
       </div>
       <div id="copy">

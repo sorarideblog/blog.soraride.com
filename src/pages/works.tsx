@@ -5,7 +5,7 @@ import { Layout } from '../components/layout'
 
 const Page: FC = () => (
   <Layout>
-    <h2>このブログについて</h2>
+    <h2>製作履歴</h2>
     <p></p>
     <Link to="/">Home</Link>
   </Layout>

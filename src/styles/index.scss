@@ -14,11 +14,15 @@ body {
   background-color: rgb(249, 249, 255);
 }
 
-@media screen and (min-width: 560px) {
-  .wrapper {
-    margin: 0;
-  }
+a {
+  text-decoration: none;
 }
+
+// @media screen and (min-width: 560px) {
+//   .wrapper {
+//     margin: 0;
+//   }
+// }
 
 #topSpacer {
   height: 70px;

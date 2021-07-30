@@ -1,10 +1,10 @@
-$footerFontColor: rgb(201, 201, 201);
-$hoverFontColor: rgb(167, 167, 167);
+$footerFontColor: rgb(238, 238, 238);
+$hoverFontColor: rgb(201, 201, 201);
 
 footer {
   font-size: 1.5rem;
   color: $footerFontColor;
-  padding: 3rem 2rem;
+  padding: 2rem;
   background: #52636d;
   justify-content: space-between;
 
@@ -18,11 +18,6 @@ footer {
     text-decoration: none;
   }
 
-  #copy {
-    font-size: 1.1rem;
-    text-align: center;
-    color: $footerFontColor;
-  }
   #footerContents {
     // display: flex;
     max-width: 20rem;
@@ -30,7 +25,9 @@ footer {
     color: $footerFontColor;
 
     #blogTitle {
-      margin: 1rem;
+      text-align: center;
+      width: fit-content;
+      margin: 2rem auto;
 
       #englishTitle {
         text-align: left;
@@ -58,27 +55,33 @@ footer {
           &:hover {
             fill: $hoverFontColor;
           }
-        }
-      }
-    }
-
-    #footerNav {
-      color: $footerFontColor;
-      ul {
-        li {
-          a {
-            margin: 0.5rem;
-            text-decoration: none;
+          &:visited {
             color: $footerFontColor;
-            font-size: 1.2rem;
-
-            &:visited {
-              text-decoration: none;
-              color: $hoverFontColor;
-            }
           }
         }
       }
     }
+
+    #footer-nav {
+      margin-bottom: 2rem;
+      color: $footerFontColor;
+      text-align: center;
+      .footer-link {
+        margin: 0.5rem;
+        text-decoration: none;
+        color: $footerFontColor;
+        font-size: 1.3rem;
+
+        &:hover {
+          color: $hoverFontColor;
+        }
+      }
+    }
   }
+}
+
+#copy {
+  font-size: 1.1rem;
+  text-align: center;
+  color: $footerFontColor;
 }
