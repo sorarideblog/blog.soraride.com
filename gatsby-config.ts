@@ -8,9 +8,8 @@ if (process.env.ENVIRONMENT !== 'production') {
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'My Blog',
+    title: `Jun's Blog`,
     author: 'soraride',
-    description: 'ブログ',
     email: 'sorarideblog@gmail.com',
     // If you didn't use the resolveSiteUrl option this needs to be set: for gatsby-plugin-sitemap
     siteUrl: `https://sorarideblog.com`
@@ -43,6 +42,23 @@ const config: GatsbyConfig = {
         pedantic: true,
         gfm: true,
         plugins: []
+      }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://sorarideblog.com',
+        sitemap: 'https://sorarideblog.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     }
   ]

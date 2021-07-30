@@ -52,7 +52,7 @@ export const Header: FC = () => {
               Top
             </Link>
             <Divider></Divider>
-            <Link to="/about" className="drawer-link">
+            <Link to="/works" className="drawer-link">
               Works
             </Link>
             <Divider></Divider>
@@ -85,7 +85,7 @@ export const Header: FC = () => {
               <Link to="/" className="header-content">
                 Top
               </Link>
-              <Link to="/about" className="header-content">
+              <Link to="/works" className="header-content">
                 Works
               </Link>
               <Link to="/contact" className="header-content">
