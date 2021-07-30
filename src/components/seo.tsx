@@ -2,16 +2,13 @@
 import React, { FC } from 'react'
 import { Helmet } from 'react-helmet'
 
-type Props = {
-  title: string
-  description: string
-}
+const SEO: FC = () => {
+  const description = 'じゅんの手作りブログ。技術系とか。製作物とか。'
 
-const SEO: FC<Props> = ({ title, description }) => {
   return (
     <Helmet
       htmlAttributes={{ lang: 'ja-jp' }}
-      title={title}
+      title={`Jun's Blog`}
       titleTemplate={`%s`}
       meta={[
         {
