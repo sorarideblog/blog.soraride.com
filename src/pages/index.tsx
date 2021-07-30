@@ -13,7 +13,10 @@ const Page: FC<QueryDataType> = ({ data }) => {
 
   return (
     <Layout>
-      <SEO></SEO>
+      <SEO
+        title={`Jun's Blog`}
+        description={'じゅんの手作りブログ。技術系とか。製作物とか。'}
+      ></SEO>
       <h2>記事一覧</h2>
       <article id="articles">
         <ul>

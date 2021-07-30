@@ -2,10 +2,12 @@
 import React, { FC } from 'react'
 import { Helmet } from 'react-helmet'
 
-const SEO: FC = () => {
-  const title = `Jun's Blog`
-  const description = 'じゅんの手作りブログ。技術系とか。製作物とか。'
+type Props = {
+  title: string
+  description: string
+}
 
+const SEO: FC<Props> = ({ title, description }) => {
   return (
     <Helmet
       htmlAttributes={{ lang: 'ja-jp' }}
@@ -35,15 +37,14 @@ const SEO: FC = () => {
         {
           property: `og:locale`,
           content: `ja_JP`
+        },
+        {
+          // Material UI: https://material-ui.com/getting-started/usage/#responsive-meta-tag
+          name: 'viewport',
+          content: 'minimum-scale=1, initial-scale=1, width=device-width'
         }
       ]}
-    >
-      {/* Material UI: https://material-ui.com/getting-started/usage/#responsive-meta-tag */}
-      <meta
-        name="viewport"
-        content="minimum-scale=1, initial-scale=1, width=device-width"
-      />
-    </Helmet>
+    />
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/post.scss'
 import { Layout } from '../components/layout'
+import SEO from '../components/seo'
 
 export default function Post({ pageContext }: any) {
   const { postTitle, updatedAt, slug, description } = pageContext.post
@@ -8,6 +9,7 @@ export default function Post({ pageContext }: any) {
 
   return (
     <Layout>
+      <SEO title={postTitle} description={description}></SEO>
       <div className="post-area">
         <div className="post-header">
           <h2>{postTitle}</h2>
