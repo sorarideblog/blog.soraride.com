@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@duik/it": "^0.6.0",
+    "@material-ui/core": "^4.12.2",
     "@types/bootstrap": "^5.0.17",
     "@types/node-sass": "^4.11.2",
     "@types/react-bootstrap": "^0.32.26",
