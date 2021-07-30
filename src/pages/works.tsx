@@ -7,7 +7,7 @@ const Page: FC = () => (
   <Layout>
     <h2>製作履歴</h2>
     <p></p>
-    <Link to="/">Home</Link>
+    <Link to="/">Topへ</Link>
   </Layout>
 )
 

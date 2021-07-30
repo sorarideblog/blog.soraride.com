@@ -18,10 +18,10 @@ const Page: FC<QueryDataType> = ({ data }) => {
           {data.allContentfulBlogPost.edges.map(({ node }: BlogPost) => (
             <li key={node.id}>
               {/* <div className="post"> */}
-              <Link to={'/post/' + node.id}>
+              <Link to={'/post/' + node.slug}>
                 <div className="post">
                   <h3>{node.postTitle}</h3>
-                  <p>{node.text.text}</p>
+                  <div>{node.description.description}</div>
                 </div>
               </Link>
               {/* </div> */}
@@ -38,8 +38,9 @@ type BlogPost = {
   node: {
     id: string
     postTitle: string
-    text: {
-      text: string
+    slug: string
+    description: {
+      description: string
     }
   }
 }
@@ -56,11 +57,12 @@ export const query = graphql`
     allContentfulBlogPost {
       edges {
         node {
-          id
           updatedAt
           postTitle
-          text {
-            text
+          id
+          slug
+          description {
+            description
           }
         }
       }
