@@ -42,6 +42,7 @@ const config: GatsbyConfig = {
         pedantic: true,
         gfm: true,
         plugins: [
+          `gatsby-remark-code-titles`,
           `gatsby-remark-autolink-headers`,
           // gatsby-remark-prismjs を使うときには
           // gatsby-remark-autolink-headers よりも後ろに書く
@@ -64,8 +65,7 @@ const config: GatsbyConfig = {
               // デフォルトは nofollow noopener noreferrer
               rel: 'noopener noreferrer'
             }
-          },
-          `gatsby-remark-code-titles`
+          }
         ]
       }
     },

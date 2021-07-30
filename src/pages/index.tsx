@@ -54,7 +54,7 @@ type QueryDataType = {
 
 export const query = graphql`
   query MyQuery {
-    allContentfulBlogPost {
+    allContentfulBlogPost(sort: { fields: updatedAt, order: DESC }) {
       edges {
         node {
           updatedAt
