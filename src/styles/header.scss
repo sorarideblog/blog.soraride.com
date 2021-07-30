@@ -24,12 +24,18 @@ $hoverColor: black;
   }
 
   #blog-title {
-    width: 13rem;
+    width: 15rem;
     font-size: 1.5rem;
 
     &:hover {
       color: $hoverColor;
     }
+  }
+
+  #burger-button {
+    position: absolute;
+    right: 0;
+    margin: 1rem;
   }
 
   .header-contents {

@@ -1,5 +1,5 @@
 import React from 'react'
-// import '../styles/post.css'
+import '../styles/post.scss'
 import { Layout } from '../components/layout'
 
 export default function Post({ pageContext }: any) {
@@ -8,11 +8,13 @@ export default function Post({ pageContext }: any) {
 
   return (
     <Layout>
-      <div className="post-header">
-        <h2>{postTitle}</h2>
-        <p className="post-date">{updatedAt}</p>
+      <div className="post-area">
+        <div className="post-header">
+          <h2>{postTitle}</h2>
+          <p className="post-date">{updatedAt}</p>
+        </div>
+        <article className="post-body">{body}</article>
       </div>
-      <article className="post-body">{body}</article>
     </Layout>
   )
 }
