@@ -1,22 +1,15 @@
 import React from 'react'
 import type { FC } from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Layout } from '../components/layout'
-import { useMediaQuery } from 'react-responsive'
 import '../styles/index.scss'
 import SEO from '../components/seo'
+import info from '../utils/common'
 
 const Page: FC<QueryDataType> = ({ data }) => {
-  // const isMobile: boolean = useMediaQuery({
-  //   query: '(max-width: 1224px)'
-  // })
-
   return (
     <Layout>
-      <SEO
-        title={`Jun's Blog`}
-        description={'じゅんの手作りブログ。技術系とか。製作物とか。'}
-      ></SEO>
+      <SEO title={info.siteTitle} description={info.siteDescription}></SEO>
       <h2>記事一覧</h2>
       <article id="articles">
         <ul>

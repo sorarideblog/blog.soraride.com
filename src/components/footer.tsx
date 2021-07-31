@@ -6,17 +6,19 @@ import {
   TwitterIcon,
   ZennIcon,
   GithubIcon,
-  QiitaIcon
+  QiitaIcon,
 } from '../components/svgs'
 
 export const Footer: FC = () => {
   return (
     <footer>
       <div id="footerContents">
-        <div id="blogTitle">
-          <div id="englishTitle">{`< Jun's Blog />`}</div>
-          <div id="japaneseTitle">じゅんのブログ</div>
-        </div>
+        <Link to="/">
+          <div id="blogTitle">
+            <div id="englishTitle">{`< Jun's Blog />`}</div>
+            <div id="japaneseTitle">じゅんのブログ</div>
+          </div>
+        </Link>
         <div id="follow">
           <a
             href="https://twitter.com/sorarideblog"
@@ -50,8 +52,8 @@ export const Footer: FC = () => {
           <Link to="/works" className="footer-link">
             Works
           </Link>
-          <Link to="/contact" className="footer-link">
-            Contact
+          <Link to="/profile" className="footer-link">
+            Profile
           </Link>
         </div>
       </div>
