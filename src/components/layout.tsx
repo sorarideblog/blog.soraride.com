@@ -2,6 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
+import { createTheme } from '@material-ui/core'
 
 export const Layout: FC = ({ children }) => {
   return (

@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { FC } from 'react'
 import '../styles/post.scss'
 import { Layout } from '../components/layout'
 import SEO from '../components/seo'
+import info from '../utils/common'
 
-export default function Post({ pageContext }: any) {
+const Post: FC = ({ pageContext }: any) => {
   const { postTitle, updatedAt, slug } = pageContext.post
   const description = pageContext.post.description.description
   const body = pageContext.post.body.childMarkdownRemark.html
 
   return (
     <Layout>
-      <SEO title={postTitle} description={description}></SEO>
+      <SEO
+        title={postTitle + ' | ' + info.siteTitle}
+        description={description}
+      ></SEO>
       <div className="post-area">
         <div className="post-header">
           <h2>{postTitle}</h2>
@@ -26,3 +30,5 @@ export default function Post({ pageContext }: any) {
     </Layout>
   )
 }
+
+export default Post

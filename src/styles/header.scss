@@ -1,3 +1,5 @@
+@import "./typography.css";
+
 $textColor: #353b41;
 $hoverColor: black;
 
@@ -6,10 +8,25 @@ $hoverColor: black;
 .burger .burger-lines:before {
   background-color: $textColor;
 }
+.burger {
+  font-size: 0.75rem;
+}
 
 #app-bar {
   box-shadow: none;
   border-bottom: solid $textColor 1px;
+}
+
+// ドロワーとメニューで使ってる
+.blog-title {
+  min-width: 15rem;
+  font-size: 1.4rem;
+  flex-grow: 1;
+  font-family: "Noto Sans JP Bold", sans-serif;
+
+  &:hover {
+    color: $hoverColor;
+  }
 }
 
 #header {
@@ -22,16 +39,6 @@ $hoverColor: black;
   a {
     color: $textColor;
     text-decoration: none;
-  }
-
-  #blog-title {
-    width: 15rem;
-    font-size: 1.4rem;
-    flex-grow: 1;
-
-    &:hover {
-      color: $hoverColor;
-    }
   }
 
   #burger-button {
@@ -58,11 +65,13 @@ $hoverColor: black;
 #drawer {
   background-color: rgb(240, 248, 248);
   .drawer-link {
+    margin: 0.4rem auto;
     display: block;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: $textColor;
     text-decoration: none;
+    font-style: italic;
 
     &:visited {
       color: $textColor;

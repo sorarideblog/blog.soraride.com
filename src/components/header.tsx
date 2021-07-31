@@ -11,15 +11,15 @@ import {
   SwipeableDrawer,
   List,
   makeStyles,
-  Divider
+  Divider,
 } from '@material-ui/core'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles({
   paper: {
     background: 'rgb(240, 248, 248)',
-    height: 'fit-content'
-  }
+    height: 'fit-content',
+  },
 })
 
 export const Header: FC = () => {
@@ -48,6 +48,10 @@ export const Header: FC = () => {
           onKeyDown={toggleDrawer}
         >
           <List>
+            <Link to="/" className="blog-title drawer-link">
+              <strong>{`< Jun's Blog />`}</strong>
+            </Link>
+            <Divider></Divider>
             <Link to="/" className="drawer-link">
               Top
             </Link>
@@ -57,8 +61,8 @@ export const Header: FC = () => {
             </Link>
             <Divider></Divider>
 
-            <Link to="/contact" className="drawer-link">
-              Contact
+            <Link to="/profile" className="drawer-link">
+              Profile
             </Link>
           </List>
         </div>
@@ -71,7 +75,7 @@ export const Header: FC = () => {
       {drawer}
       <AppBar id="app-bar" position="fixed">
         <Toolbar id="header">
-          <Link to="/" id="blog-title">
+          <Link to="/" className="blog-title">
             <strong>{`< Jun's Blog />`}</strong>
           </Link>
           {isMobile ? (
@@ -88,8 +92,8 @@ export const Header: FC = () => {
               <Link to="/works" className="header-content">
                 Works
               </Link>
-              <Link to="/contact" className="header-content">
-                Contact
+              <Link to="/profile" className="header-content">
+                Profile
               </Link>
             </Container>
           )}

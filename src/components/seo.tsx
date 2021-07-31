@@ -16,33 +16,33 @@ const SEO: FC<Props> = ({ title, description }) => {
       meta={[
         {
           name: `description`,
-          content: description
+          content: description,
         },
         {
           property: `og:title`,
-          content: title
+          content: title,
         },
         {
           property: `og:description`,
-          content: description
+          content: description,
         },
         {
           property: `og:type`,
-          content: `website`
+          content: `website`,
         },
         {
           property: `og:site_name`,
-          content: `Dev Blog`
+          content: `Dev Blog`,
         },
         {
           property: `og:locale`,
-          content: `ja_JP`
+          content: `ja_JP`,
         },
         {
           // Material UI: https://material-ui.com/getting-started/usage/#responsive-meta-tag
           name: 'viewport',
-          content: 'minimum-scale=1, initial-scale=1, width=device-width'
-        }
+          content: 'minimum-scale=1, initial-scale=1, width=device-width',
+        },
       ]}
     />
   )
