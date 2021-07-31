@@ -23,6 +23,9 @@ body {
 
 a {
   text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
 }
 
 // @media screen and (min-width: 560px) {

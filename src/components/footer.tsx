@@ -24,16 +24,23 @@ export const Footer: FC = () => {
             href="https://twitter.com/sorarideblog"
             target="_blank"
             rel="noreferrer"
+            id="twitter"
           >
             <TwitterIcon />
           </a>
-          <a href="https://zenn.dev/soraride" target="_blank" rel="noreferrer">
+          <a
+            href="https://zenn.dev/soraride"
+            target="_blank"
+            rel="noreferrer"
+            id="zenn"
+          >
             <ZennIcon />
           </a>
           <a
             href="https://github.com/sorarideblog"
             target="_blank"
             rel="noreferrer"
+            id="github"
           >
             <GithubIcon />
           </a>
@@ -41,6 +48,7 @@ export const Footer: FC = () => {
             href="https://qiita.com/sorarideblog"
             target="_blank"
             rel="noreferrer"
+            id="qiita"
           >
             <QiitaIcon />
           </a>
