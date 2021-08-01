@@ -15,14 +15,12 @@ const Page: FC<QueryDataType> = ({ data }) => {
         <ul>
           {data.allContentfulBlogPost.edges.map(({ node }: BlogPost) => (
             <li key={node.id}>
-              {/* <div className="post"> */}
               <Link to={'/post/' + node.slug}>
                 <div className="post">
                   <h3>{node.postTitle}</h3>
                   <div>{node.description.description}</div>
                 </div>
               </Link>
-              {/* </div> */}
             </li>
           ))}
         </ul>

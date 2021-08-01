@@ -60,6 +60,9 @@ export const Footer: FC = () => {
           <Link to="/works" className="footer-link">
             Works
           </Link>
+          <Link to="/skills" className="footer-link">
+            Skills
+          </Link>
           <Link to="/profile" className="footer-link">
             Profile
           </Link>

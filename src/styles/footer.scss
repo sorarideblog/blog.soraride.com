@@ -25,6 +25,7 @@ footer {
     color: $footerFontColor;
 
     a {
+      text-decoration: none;
       color: inherit;
       &:hover {
         color: $hoverFontColor;
@@ -58,7 +59,7 @@ footer {
           width: 40px;
 
           &:hover {
-            fill: $hoverFontColor;
+            fill-opacity: 0.8;
           }
           &:visited {
             color: $footerFontColor;

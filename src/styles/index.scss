@@ -1,31 +1,13 @@
 @import "./typography.css";
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   margin: 0;
-// }
-
 html {
   font-family: "Noto Sans JP Regular", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   background-color: rgb(249, 249, 255);
   margin: 0;
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-  &:visited {
-    color: inherit;
-  }
 }
 
 // @media screen and (min-width: 560px) {
@@ -38,14 +20,45 @@ a {
   height: 70px;
 }
 
-.post {
-  padding: 1rem;
-  padding-top: 0;
-  background-color: white;
-  border-radius: 0.5rem;
-  border: solid dimgray 1px;
-  // box-shadow: 0 2px 4px rgb(67 133 187 / 7%);
+#articles {
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:visited {
+      color: inherit;
+    }
+  }
+  ul {
+    // display: flex;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      .post {
+        margin: 0.7rem 0;
+        box-sizing: border-box;
+
+        padding: 1rem;
+        padding-top: 0;
+        background-color: white;
+        border-radius: 0.5rem;
+        border: solid dimgray 1px;
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
+
+// .post {
+//   padding: 1rem;
+//   padding-top: 0;
+//   background-color: white;
+//   border-radius: 0.5rem;
+//   border: solid dimgray 1px;
+// }
 
 .navbar-light .navbar-toggler {
   border: none;
@@ -95,29 +108,6 @@ button:focus {
   margin: auto;
   max-width: 700px;
   padding: 1rem;
-
-  ul {
-    // display: flex;
-    list-style-type: none;
-    padding: 0;
-
-    li {
-      display: block;
-
-      .post {
-        margin: 0.7rem 0;
-        box-sizing: border-box;
-
-        p {
-          font-size: 1rem;
-        }
-      }
-      a {
-        width: 100%;
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 ///////////////// コードボックスタイトルのスタイリング
