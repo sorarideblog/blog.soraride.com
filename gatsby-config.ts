@@ -23,6 +23,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-twitter`,
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -64,9 +65,15 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-remark-external-links',
             options: {
               // デフォルトは _blank
-              target: '_self',
+              target: '_blank',
               // デフォルトは nofollow noopener noreferrer
               rel: 'noopener noreferrer',
+            },
+          },
+          {
+            resolve: `gatsby-remark-link-card`,
+            options: {
+              //...
             },
           },
         ],

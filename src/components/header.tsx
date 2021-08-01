@@ -60,7 +60,10 @@ export const Header: FC = () => {
               Works
             </Link>
             <Divider></Divider>
-
+            <Link to="/skills" className="drawer-link">
+              Skills
+            </Link>
+            <Divider></Divider>
             <Link to="/profile" className="drawer-link">
               Profile
             </Link>
@@ -91,6 +94,9 @@ export const Header: FC = () => {
               </Link>
               <Link to="/works" className="header-content">
                 Works
+              </Link>
+              <Link to="/skills" className="header-content">
+                Skills
               </Link>
               <Link to="/profile" className="header-content">
                 Profile

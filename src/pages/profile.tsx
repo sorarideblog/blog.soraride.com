@@ -19,18 +19,21 @@ const Page: FC = ({ data }: any) => (
           alt="プロフィール画像"
         ></Img>
         <div>
-          <p>名前：白坂　潤</p>
-          <p>所属：大学院　博士前期課程１年</p>
+          <p>名前：白坂 潤</p>
+          <p>所属：大学院工学研究科 博士前期課程１年</p>
           <p>趣味：散歩</p>
           <p>好きな食べ物：蒙古タンメン</p>
           <p>老後に嗜みたい趣味：ピアノ</p>
         </div>
+        <div>
+          <p>こんにちは。</p>
+        </div>
       </div>
 
-      <div id="skills">
-        <h2>経験スキル</h2>
+      {/* <div id="career">
+        <h2>業務経歴</h2>
         <div></div>
-      </div>
+      </div> */}
     </article>
   </Layout>
 )
