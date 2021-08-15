@@ -1,0 +1,80 @@
+@import "./typography.css";
+
+$textColor: #353b41;
+$hoverColor: black;
+
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
+  background-color: $textColor;
+}
+.burger {
+  font-size: 0.75rem;
+}
+
+#app-bar {
+  box-shadow: none;
+  border-bottom: solid $textColor 1px;
+}
+
+// ドロワーとメニューで使ってる
+.blog-title {
+  min-width: 15rem;
+  font-size: 1.4rem;
+  flex-grow: 1;
+  font-family: "Noto Sans JP Bold", sans-serif;
+
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+#header {
+  background-color: rgb(240, 248, 248);
+  display: flex;
+  // flex-direction: row;
+  filter: none;
+  width: wrap;
+
+  a {
+    color: $textColor;
+    text-decoration: none;
+  }
+
+  #burger-button {
+    position: relative;
+    right: 0;
+    box-sizing: border-box;
+    flex-grow: 0;
+  }
+
+  .header-contents {
+    .header-content {
+      color: $textColor;
+      padding-left: 1rem;
+      font-size: 1.4rem;
+      font-style: italic;
+
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+  }
+}
+
+#drawer {
+  background-color: rgb(240, 248, 248);
+  .drawer-link {
+    margin: 0.4rem auto;
+    display: block;
+    text-align: center;
+    font-size: 1.7rem;
+    color: $textColor;
+    text-decoration: none;
+    font-style: italic;
+
+    &:visited {
+      color: $textColor;
+    }
+  }
+}

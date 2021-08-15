@@ -1,52 +1,90 @@
-* {
+@import "./typography.css";
+
+html {
+  font-family: "Noto Sans JP Regular", sans-serif;
+}
+
+body {
+  background-color: rgb(249, 249, 255);
   margin: 0;
   padding: 0;
 }
 
-html {
-  font-family: sans-serif;
+// @media screen and (min-width: 560px) {
+//   .wrapper {
+//     margin: 0;
+//   }
+// }
+
+#topSpacer {
+  height: 70px;
 }
 
-@media screen and (min-width: 560px) {
-  .wrapper {
-    margin: 0;
-  }
-}
-
-header {
-  padding: 1rem;
-  background: lavender;
-
-  &#header {
-    background-color: rgb(240, 248, 248);
-    display: flex;
-    flex-direction: row;
-
-    a {
-      color: #353b41;
-      text-decoration: none;
+#articles {
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:visited {
+      color: inherit;
     }
+  }
+  ul {
+    // display: flex;
+    list-style-type: none;
+    padding: 0;
 
-    .header-contents {
-      // display: flex;
+    li {
+      .post {
+        margin: 0.7rem 0;
+        box-sizing: border-box;
 
-      span {
-        color: rgb(66, 66, 66);
-        padding-left: 1rem;
-        font-size: 1.4rem;
-        font-style: italic;
+        padding: 1rem;
+        padding-top: 0;
+        background-color: white;
+        border-radius: 0.5rem;
+        border: solid dimgray 1px;
+
+        p {
+          font-size: 1rem;
+        }
       }
     }
   }
 }
 
+// .post {
+//   padding: 1rem;
+//   padding-top: 0;
+//   background-color: white;
+//   border-radius: 0.5rem;
+//   border: solid dimgray 1px;
+// }
+
+.navbar-light .navbar-toggler {
+  border: none;
+
+  &:active {
+    outline: none;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
 #main-aside-wrapper {
   display: flex;
   flex-direction: row;
+  font-size: 1rem;
+
+  main {
+    flex-grow: 1;
+    max-width: 100vw; // コードブロックのせいで横に長くなってしまうことがあるので。
+  }
 
   aside {
     max-width: 20rem;
-    background-color: rgb(234, 255, 203);
+    background-color: rgb(238, 238, 238);
     padding: 1rem;
 
     #sponser-link {
@@ -65,47 +103,22 @@ header {
   }
 }
 
-main {
-  background-color: rgb(249, 249, 255);
-}
-
-footer {
-  font-size: 1.5rem;
-  color: white;
-  padding: 3rem 2rem;
-  background: #52636d;
-  justify-content: space-between;
-
-  ul {
-    display: flex;
-    list-style-type: none;
-  }
-
-  li:not(:first-child) {
-    margin-left: 1rem;
-    text-decoration: none;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  #copy {
-    font-size: 1.1rem;
-    text-align: center;
-    color: rgb(180, 180, 180);
-  }
-}
-
 .content {
   margin: 1rem;
+  margin: auto;
+  max-width: 700px;
+  padding: 1rem;
+}
 
-  ul {
-    // display: flex;
-    list-style-type: none;
-  }
+///////////////// コードボックスタイトルのスタイリング
 
-  .post {
-    margin: 1rem;
-  }
+.gatsby-code-title {
+  background: #32b9b9;
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  margin-top: 1rem;
+  font-size: 0.9em;
+  line-height: 1rem;
+  display: table;
+  border-radius: 4px 4px 0 0;
 }

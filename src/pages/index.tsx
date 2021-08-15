@@ -1,48 +1,28 @@
 import React from 'react'
 import type { FC } from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Layout } from '../components/layout'
 import '../styles/index.scss'
+import SEO from '../components/seo'
+import info from '../utils/common'
 
-const Page: FC = () => {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      allContentfulBlogPost {
-        nodes {
-          postTitle
-          updatedAt
-          id
-          text {
-            id
-            text
-          }
-        }
-      }
-    }
-  `)
-
+const Page: FC<QueryDataType> = ({ data }) => {
   return (
     <Layout>
-      <h1>ホーム</h1>
-      <p>
-        This blog is created by{' '}
-        <a href="https://twitter.com/sorarideblog/">@sorarideblog</a>.
-      </p>
-
-      <article>
+      <SEO title={info.siteTitle} description={info.siteDescription}></SEO>
+      <h2>記事一覧</h2>
+      <article id="articles">
         <ul>
-          {data.allContentfulBlogPost.nodes.map(
-            ({ id, postTitle, text }: MapType) => (
-              <li key={id}>
-                <Link to={'/post/' + id}>
-                  <div className="post">
-                    <h3>{postTitle}</h3>
-                    <p>{text.text}</p>
-                  </div>
-                </Link>
-              </li>
-            )
-          )}
+          {data.allContentfulBlogPost.edges.map(({ node }: BlogPost) => (
+            <li key={node.id}>
+              <Link to={'/post/' + node.slug}>
+                <div className="post">
+                  <h3>{node.postTitle}</h3>
+                  <div>{node.description.description}</div>
+                </div>
+              </Link>
+            </li>
+          ))}
         </ul>
       </article>
     </Layout>
@@ -50,12 +30,40 @@ const Page: FC = () => {
 }
 
 // 暫定で作ってみた型
-type MapType = {
-  id: string
-  postTitle: string
-  text: {
-    text: string
+type BlogPost = {
+  node: {
+    id: string
+    postTitle: string
+    slug: string
+    description: {
+      description: string
+    }
   }
 }
+type QueryDataType = {
+  data: {
+    allContentfulBlogPost: {
+      edges: BlogPost[]
+    }
+  }
+}
+
+export const query = graphql`
+  query MyQuery {
+    allContentfulBlogPost(sort: { fields: updatedAt, order: DESC }) {
+      edges {
+        node {
+          updatedAt
+          postTitle
+          id
+          slug
+          description {
+            description
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Page

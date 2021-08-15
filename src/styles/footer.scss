@@ -1,0 +1,108 @@
+$footerFontColor: rgb(238, 238, 238);
+$hoverFontColor: rgb(201, 201, 201);
+
+footer {
+  font-size: 1.5rem;
+  color: $footerFontColor;
+  padding: 2rem;
+  background: #52636d;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  li:not(:first-child) {
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+
+  #footerContents {
+    // display: flex;
+    max-width: 20rem;
+    margin: auto;
+    color: $footerFontColor;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        color: $hoverFontColor;
+      }
+    }
+
+    #blogTitle {
+      text-align: center;
+      width: fit-content;
+      margin: 2rem auto;
+
+      #englishTitle {
+        text-align: left;
+        font-size: 2rem;
+      }
+      #japaneseTitle {
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+    }
+    #follow {
+      text-align: center;
+      color: $footerFontColor;
+      margin-bottom: 1rem;
+
+      a {
+        margin: 0.5rem;
+        svg {
+          fill: white;
+          width: 40px;
+
+          &:hover {
+            fill-opacity: 0.8;
+          }
+          &:visited {
+            color: $footerFontColor;
+          }
+        }
+        #zenn {
+          fill: #3ea8ff;
+        }
+      }
+      #twitter > svg {
+        fill: rgb(29 161 242);
+      }
+      #zenn > svg {
+        fill: #3ea8ff;
+      }
+      // #github > svg {
+      //   fill: black;
+      // }
+      #qiita > svg {
+        fill: #55c500;
+      }
+    }
+
+    #footer-nav {
+      margin-bottom: 2rem;
+      color: $footerFontColor;
+      text-align: center;
+      .footer-link {
+        margin: 0.5rem;
+        text-decoration: none;
+        color: $footerFontColor;
+        font-size: 1.3rem;
+
+        &:hover {
+          color: $hoverFontColor;
+        }
+      }
+    }
+  }
+}
+
+#copy {
+  font-size: 1.1rem;
+  text-align: center;
+  color: $footerFontColor;
+}

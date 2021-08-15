@@ -1,6 +1,6 @@
 {
   "name": "blog.soraride.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "soraride's individual blog.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "stylelint": "stylelint 'src/**/*.scss'",
     "stylelint:fix": "stylelint --fix 'src/**/*.scss'",
     "dev": "ts-node ./node_modules/.bin/gatsby develop",
-    "build": "ts-node ./node_modules/.bin/gatsby build"
+    "build": "ts-node ./node_modules/.bin/gatsby build",
+    "serve": "ts-node ./node_modules/.bin/gatsby serve"
   },
   "keywords": [],
   "author": "soraride <sorarideblog@gmail.com>",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/react": "^16.14.8",
     "@types/react-dom": "16.9.9",
+    "@types/react-helmet": "^6.1.2",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
     "eslint": "^7.27.0",
@@ -27,6 +29,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby-cli": "^2.19.3",
+    "gatsby-remark-code-titles": "^1.1.0",
     "husky": "^5.2.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.3.0",
@@ -48,11 +51,38 @@
     "*.scss": "stylelint --fix"
   },
   "dependencies": {
-    "gatsby": "^2.32.13",
-    "gatsby-plugin-sass": "^3.2.0",
-    "gatsby-source-contentful": "4.6.3",
+    "@animated-burgers/burger-slip": "^1.1.2",
+    "@duik/it": "^0.6.0",
+    "@material-ui/core": "^4.12.2",
+    "@types/node-sass": "^4.11.2",
+    "@types/react-responsive": "^8.0.3",
+    "bulma": "^0.9.3",
+    "classnames": "^2.3.1",
+    "gatsby": "^3.0.0",
+    "gatsby-image": "^3.10.0",
+    "gatsby-plugin-image": "^1.10.1",
+    "gatsby-plugin-nprogress": "^3.10.0",
+    "gatsby-plugin-react-helmet": "^4.10.0",
+    "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-robots-txt": "^1.6.8",
+    "gatsby-plugin-sass": "^4.10.0",
+    "gatsby-plugin-sharp": "^3.10.2",
+    "gatsby-plugin-sitemap": "^4.6.0",
+    "gatsby-plugin-twitter": "^3.10.0",
+    "gatsby-remark-autolink-headers": "^4.7.0",
+    "gatsby-remark-check-links": "^2.1.0",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-link-card": "^1.0.3",
+    "gatsby-remark-prismjs": "^5.7.0",
+    "gatsby-source-contentful": "^5.10.0",
+    "gatsby-transformer-remark": "^4.7.0",
+    "gatsby-transformer-sharp": "^3.10.0",
     "node-sass": "^5.0.0",
-    "react": "16.14.0",
-    "react-dom": "16.14.0"
+    "prismjs": "^1.24.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
+    "react-responsive": "^9.0.0-beta.3",
+    "sass": "^1.36.0"
   }
 }

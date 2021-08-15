@@ -35,11 +35,13 @@
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "import/no-unresolved": "warn",
+    "no-irregular-whitespace": "off",
     "prettier/prettier": [
       "error",
       {
         "singleQuote": true,
-        "trailingComma": "none",
+        "trailingComma": "all",
         "arrowParens": "avoid",
         "semi": false
       }
