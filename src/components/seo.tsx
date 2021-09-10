@@ -32,7 +32,7 @@ const SEO: FC<Props> = ({ title, description }) => {
         },
         {
           property: `og:site_name`,
-          content: `Dev Blog`,
+          content: `Jun's Blog`,
         },
         {
           property: `og:locale`,
