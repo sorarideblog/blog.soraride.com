@@ -8,7 +8,7 @@
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}' gatsby-*.ts && tsc --noEmit",
     "stylelint": "stylelint 'src/**/*.scss'",
     "stylelint:fix": "stylelint --fix 'src/**/*.scss'",
-    "dev": "ts-node ./node_modules/.bin/gatsby develop",
+    "dev": "ts-node ./node_modules/.bin/gatsby develop -p 3000",
     "build": "ts-node ./node_modules/.bin/gatsby build",
     "serve": "ts-node ./node_modules/.bin/gatsby serve"
   },
