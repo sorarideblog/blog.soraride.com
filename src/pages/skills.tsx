@@ -51,7 +51,7 @@ const Page: FC = () => {
                 <li>Netlify</li>
                 <li>Contentful</li>
                 <li>MySQL</li>
-                <li>Rasbpberry Pi</li>
+                <li>Raspberry Pi</li>
                 <li>VS Code</li>
                 <li>JetBrains製 IDE</li>
                 <li>SSH</li>

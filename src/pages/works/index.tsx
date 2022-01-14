@@ -16,6 +16,29 @@ const Page: FC = () => {
         <h2>{pageTitle}</h2>
 
         <section>
+          <h3>Youtubeライブ版オンライン作業部屋</h3>
+          <div>
+            <blockquote className="twitter-tweet">
+              <p lang="ja" dir="ltr">
+                記事を書きました😉
+                <br />
+                <br />
+                youtube配信型オンライン自習室を作った
+                [オンライン作業部屋]｜そららいど
+                <a href="https://t.co/o2WZqiCfPm">https://t.co/o2WZqiCfPm</a>
+                <a href="https://twitter.com/hashtag/zenn?src=hash&amp;ref_src=twsrc%5Etfw">
+                  #zenn
+                </a>
+              </p>
+              &mdash; そららいど (@sorarideblog)
+              <a href="https://twitter.com/sorarideblog/status/1479676748581453826?ref_src=twsrc%5Etfw">
+                January 8, 2022
+              </a>
+            </blockquote>
+          </div>
+        </section>
+
+        <section>
           <h3>オンライン作業部屋</h3>
           <div>
             <blockquote className="twitter-tweet">
