@@ -10,14 +10,15 @@
     "stylelint:fix": "stylelint --fix 'src/**/*.scss'",
     "dev": "ts-node ./node_modules/.bin/gatsby develop -p 3000",
     "build": "ts-node ./node_modules/.bin/gatsby build",
-    "serve": "ts-node ./node_modules/.bin/gatsby serve"
+    "serve": "ts-node ./node_modules/.bin/gatsby serve",
+    "clean": "ts-node ./node_modules/.bin/gatsby clean"
   },
   "keywords": [],
   "author": "soraride <sorarideblog@gmail.com>",
   "private": true,
   "license": "ISC",
   "devDependencies": {
-    "@types/react": "^18.0.5",
+    "@types/react": "^17.0.0",
     "@types/react-dom": "16.9.9",
     "@types/react-helmet": "^6.1.2",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
@@ -52,7 +53,6 @@
   },
   "dependencies": {
     "@animated-burgers/burger-slip": "^1.1.2",
-    "@duik/it": "^0.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
@@ -78,14 +78,14 @@
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-link-card": "^1.0.3",
     "gatsby-remark-prismjs": "^6.0.0",
-    "gatsby-source-contentful": "^7.3.1",
+    "gatsby-source-contentful": "^7.10.1",
     "gatsby-source-filesystem": "^4.12.1",
     "gatsby-transformer-remark": "^5.0.0",
     "gatsby-transformer-sharp": "^4.12.1",
     "node-sass": "^5.0.0",
     "prismjs": "^1.27.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-helmet": "^6.1.0",
     "react-responsive": "^9.0.0-beta.3",
     "sass": "^1.36.0"
