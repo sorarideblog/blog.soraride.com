@@ -2,14 +2,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "editor.trimAutoWhitespace": false,
-  "cSpell.words": [
-    "Chatwork",
-    "Contentful",
-    "Firestore",
-    "Nuxt",
-    "Qiita",
-    "sorarideblog",
-    "zenn"
-  ]
+  "editor.trimAutoWhitespace": false
 }

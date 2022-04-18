@@ -1,4 +1,3 @@
-
 .post-area {
   padding: 1rem;
   background-color: white;
@@ -53,41 +52,5 @@
     padding: 0.3rem;
     margin: 1rem auto;
     box-sizing: border-box;
-  }
-  
-  blockquote {
-    position: relative;
-    padding: 10px 15px 10px 60px;
-    box-sizing: border-box;
-    font-style: italic;
-    background: #efefef;
-    color: #555;
-  }
-
-  blockquote:before{
-      position: absolute;
-      top: 18px;
-      left: 15px;
-      font: var(--fa-font-solid);
-      content: "\f10d";
-      display: inline-block;
-      font-family: "Font Awesome 6 Free";
-      color: #cfcfcf;
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 900;
-  }
-
-  blockquote p {
-      padding: 0;
-      margin: 0.5rem 0;
-      line-height: 1.7;
-  }
-
-  blockquote cite {
-      display: block;
-      text-align: right;
-      color: #888888;
-      font-size: 0.9em;
   }
 }

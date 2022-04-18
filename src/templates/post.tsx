@@ -3,8 +3,6 @@ import '../styles/post.scss'
 import { Layout } from '../components/layout'
 import SEO from '../components/seo'
 import info from '../utils/common'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserPen } from '@fortawesome/free-solid-svg-icons'
 
 const Post: FC = ({ pageContext }: any) => {
   const { postTitle, updatedAt, slug } = pageContext.post

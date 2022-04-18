@@ -1,5 +1,6 @@
 import React from 'react'
 import type { FC } from 'react'
+import { Link } from 'gatsby'
 
 export const SideBar: FC = () => (
   <aside>
