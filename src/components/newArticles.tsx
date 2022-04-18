@@ -1,6 +1,5 @@
 import React from 'react'
 import type { FC } from 'react'
-import { Link } from 'gatsby'
 
 // TODO: 記事データ受け取り
 export const NewArticles: FC = () => (
