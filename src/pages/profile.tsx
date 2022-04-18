@@ -1,11 +1,12 @@
 import React from 'react'
 import type { FC } from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
 import SEO from '../components/seo'
 import '../styles/profile.scss'
 import Img from 'gatsby-image'
 import { any } from 'prop-types'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Page: FC = ({ data }: any) => (
   <Layout>
@@ -13,11 +14,11 @@ const Page: FC = ({ data }: any) => (
     <article>
       <div id="profile">
         <h2>プロフィール</h2>
-        <Img
+        <StaticImage
           className="profile-img"
-          fixed={data.file.childImageSharp.fixed}
+          src="../images/2021-06-13_18-40-37_985.jpeg"
           alt="プロフィール画像"
-        ></Img>
+        />
         <div>
           <p>名前：白坂 潤</p>
           <p>所属：大学院工学研究科 博士前期課程１年</p>
@@ -39,15 +40,3 @@ const Page: FC = ({ data }: any) => (
 )
 
 export default Page
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "2021-06-13_18-40-37_985.jpeg" }) {
-      childImageSharp {
-        fixed(height: 150, width: 150) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
