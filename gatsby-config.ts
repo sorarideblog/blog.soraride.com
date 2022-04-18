@@ -19,8 +19,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-twitter`,
@@ -52,19 +51,18 @@ const config: GatsbyConfig = {
         accessToken: process.env.accessToken,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: path.join(__dirname, `src`, `images`),
+    //     ignore: [`**/.*`], // ignore files starting with a dot
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        commonmark: true,
         footnotes: true,
-        pedantic: true,
         gfm: true,
         plugins: [
           `gatsby-remark-code-titles`,
