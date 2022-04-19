@@ -115,6 +115,7 @@ const config: GatsbyConfig = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    `gatsby-plugin-lodash`,
   ],
 }
 export default config
