@@ -1,6 +1,5 @@
 import type { GatsbyConfig } from 'gatsby'
 import dotenv from 'dotenv'
-import path from 'path'
 
 if (process.env.ENVIRONMENT !== 'production') {
   dotenv.config()
