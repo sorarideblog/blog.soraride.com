@@ -30,6 +30,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby-cli": "^2.19.3",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
     "gatsby-remark-code-titles": "^1.1.0",
     "husky": "^5.2.0",
     "lint-staged": "^10.5.4",

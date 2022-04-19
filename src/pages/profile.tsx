@@ -1,10 +1,8 @@
 import React from 'react'
 import type { FC } from 'react'
-import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
 import SEO from '../components/seo'
 import '../styles/profile.scss'
-import Img from 'gatsby-image'
 import { any } from 'prop-types'
 import { StaticImage } from 'gatsby-plugin-image'
 
