@@ -15,7 +15,7 @@ const Page: FC = () => {
         <h2>{pageTitle}</h2>
 
         <section>
-          <h3>Youtubeライブ版オンライン作業部屋</h3>
+          <h3 className="work-title">Youtubeライブ版オンライン作業部屋</h3>
           <div>
             <blockquote className="twitter-tweet">
               <p lang="ja" dir="ltr">
@@ -38,7 +38,7 @@ const Page: FC = () => {
         </section>
 
         <section>
-          <h3>オンライン作業部屋</h3>
+          <h3 className="work-title">オンライン作業部屋</h3>
           <div>
             <blockquote className="twitter-tweet">
               <p lang="ja" dir="ltr">
@@ -62,7 +62,9 @@ const Page: FC = () => {
         </section>
 
         <section>
-          <h3>聴いた音楽の週間ランキングをツイートするプログラム</h3>
+          <h3 className="work-title">
+            聴いた音楽の週間ランキングをツイートするプログラム
+          </h3>
           <div>
             <blockquote className="twitter-tweet">
               <p lang="ja" dir="ltr">
