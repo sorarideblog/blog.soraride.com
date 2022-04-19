@@ -48,6 +48,7 @@ const config: GatsbyConfig = {
       options: {
         spaceId: process.env.spaceId,
         accessToken: process.env.accessToken,
+        enableTags: true,
       },
     },
     // {
