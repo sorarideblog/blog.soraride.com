@@ -1,10 +1,15 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('path')
+import type { GatsbyNode } from 'gatsby'
+import path from 'path'
+import { BlogPost, BlogPostNode } from 'src/types/blog-post'
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+export const createPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions,
+  reporter,
+}) => {
   const { createPage } = actions
 
-  const result = await graphql(
+  const result: any = await graphql(
     `
       {
         allContentfulBlogPost {
@@ -26,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-    `
+    `,
   )
 
   if (result.errors) {
@@ -36,11 +41,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const { edges } = result.data.allContentfulBlogPost
 
-  edges.forEach(edge => {
+  edges.forEach((edge: BlogPost) => {
     createPage({
       path: `/post/${edge.node.slug}/`,
       component: path.resolve('./src/templates/post.tsx'),
-      context: { post: edge.node }
+      context: edge,
     })
   })
 }

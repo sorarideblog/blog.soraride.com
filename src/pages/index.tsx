@@ -5,6 +5,7 @@ import { Layout } from '../components/layout'
 import '../styles/index.scss'
 import SEO from '../components/seo'
 import info from '../utils/common'
+import type { BlogPost } from '../types/blog-post'
 
 const Page: FC<QueryDataType> = ({ data }) => {
   return (
@@ -29,17 +30,6 @@ const Page: FC<QueryDataType> = ({ data }) => {
   )
 }
 
-// 暫定で作ってみた型
-type BlogPost = {
-  node: {
-    id: string
-    postTitle: string
-    slug: string
-    description: {
-      description: string
-    }
-  }
-}
 type QueryDataType = {
   data: {
     allContentfulBlogPost: {

@@ -3,13 +3,13 @@ import '../styles/post.scss'
 import { Layout } from '../components/layout'
 import SEO from '../components/seo'
 import info from '../utils/common'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserPen } from '@fortawesome/free-solid-svg-icons'
+import type { BlogPost } from '../types/blog-post'
 
-const Post: FC = ({ pageContext }: any) => {
-  const { postTitle, updatedAt, slug } = pageContext.post
-  const description = pageContext.post.description.description
-  const body = pageContext.post.body.childMarkdownRemark.html
+// gatsby-node.jsでgraphqlで取得したデータが流し込まれる
+const Post: FC<BlogPost> = (pageContext: BlogPost) => {
+  const { postTitle, updatedAt } = pageContext.node
+  const description = pageContext.node.description.description
+  const body = pageContext.node.body.childMarkdownRemark.html
 
   return (
     <Layout>
