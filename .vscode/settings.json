@@ -23,6 +23,7 @@
         "sorarideblog",
         "stylelint",
         "Swipeable",
+        "tagmanager",
         "zenn"
     ],
     "prettier.requireConfig": true
