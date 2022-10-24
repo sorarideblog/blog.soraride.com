@@ -1,7 +1,13 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll.eslint": true
   },
+  "eslint.format.enable": false,
+  "editor.tabSize": 4,
+  "typescript.suggest.autoImports": true,
   "editor.trimAutoWhitespace": false,
   "cSpell.words": [
     "Chatwork",
