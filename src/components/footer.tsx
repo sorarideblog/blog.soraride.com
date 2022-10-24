@@ -15,7 +15,7 @@ export const Footer: FC = () => {
             <div id='footerContents'>
                 <Link to='/'>
                     <div id='blogTitle'>
-                        <div id='englishTitle'>{`< Jun's Blog />`}</div>
+                        <div id='englishTitle'>{`< Soraride's Blog />`}</div>
                         <div id='japaneseTitle'>そららいどのブログ</div>
                     </div>
                 </Link>
