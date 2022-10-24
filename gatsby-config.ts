@@ -8,7 +8,7 @@ if (process.env.ENVIRONMENT !== 'production') {
 const config: GatsbyConfig = {
     siteMetadata: {
         title: `Jun's Blog`,
-        description: 'じゅんの手作りブログ。技術系とか。製作物とか。',
+        description: 'そららいどの手作りブログ。技術系とか。製作物とか。',
         author: 'soraride',
         email: 'sorarideblog@gmail.com',
         // If you didn't use the resolveSiteUrl option this needs to be set: for gatsby-plugin-sitemap
