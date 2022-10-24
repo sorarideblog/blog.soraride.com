@@ -7,9 +7,15 @@
     "Chatwork",
     "Contentful",
     "Firestore",
+    "fontawesome",
+    "fontsource",
+    "fortawesome",
     "Nuxt",
+    "prismjs",
     "Qiita",
+    "soraride",
     "sorarideblog",
+    "stylelint",
     "zenn"
   ]
 }

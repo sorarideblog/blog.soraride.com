@@ -1,15 +1,13 @@
 import type { GatsbyNode } from 'gatsby'
 import path from 'path'
-import { BlogPost, BlogPostNode } from 'src/types/blog-post'
+import type { BlogPost } from 'src/types/blog-post'
 
 export const createPages: GatsbyNode['createPages'] = async ({
   graphql,
-  actions,
+  actions: { createPage },
   reporter,
 }) => {
-  const { createPage } = actions
-
-  const result: any = await graphql(
+  const result = await graphql(
     `
       {
         allContentfulBlogPost {

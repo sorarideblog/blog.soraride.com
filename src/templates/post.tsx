@@ -5,8 +5,12 @@ import SEO from '../components/seo'
 import info from '../utils/common'
 import type { BlogPost } from '../types/blog-post'
 
+type PostProps = {
+  pageContext: BlogPost
+}
+
 // gatsby-node.jsでgraphqlで取得したデータが流し込まれる
-const Post: FC<BlogPost> = (pageContext: BlogPost) => {
+const Post: FC<PostProps> = ({ pageContext }) => {
   const { postTitle, updatedAt } = pageContext.node
   const description = pageContext.node.description.description
   const body = pageContext.node.body.childMarkdownRemark.html
