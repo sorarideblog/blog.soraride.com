@@ -1,23 +1,23 @@
 {
-  "include": [
-    "./src/**/*",
-    "./gatsby-*.ts", 
-    "gatsby-node.ts",
-    "gatsby-browser.js",
-    "./types/**/*",
-    "./gatsby-node/**/*"
-  ],
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "lib": ["dom", "esnext"],
-    "jsx": "react",
-    "strict": true,
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
-    "baseUrl": "."
-  }
+    "include": [
+        "./src/**/*",
+        "./gatsby-*.ts",
+        "gatsby-node.ts",
+        "gatsby-browser.js",
+        "./types/**/*",
+        "./gatsby-node/**/*"
+    ],
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "lib": ["dom", "esnext"],
+        "jsx": "react",
+        "strict": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "baseUrl": "."
+    }
 }

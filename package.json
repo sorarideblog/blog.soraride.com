@@ -30,7 +30,6 @@
         "eslint-plugin-import": "^2.23.4",
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.24.0",
-        "eslint-plugin-react-hooks": "^4.2.0",
         "gatsby-cli": "^4.24.0",
         "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
         "gatsby-remark-code-titles": "^1.1.0",
