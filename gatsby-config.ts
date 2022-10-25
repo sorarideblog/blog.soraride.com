@@ -7,7 +7,7 @@ if (process.env.ENVIRONMENT !== 'production') {
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: `Jun's Blog`,
+        title: `Soraride's Blog`,
         description: 'そららいどの手作りブログ。技術系とか。製作物とか。',
         author: 'soraride',
         email: 'sorarideblog@gmail.com',
