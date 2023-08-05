@@ -22,16 +22,7 @@
     "rules": {
         "react/prop-types": "off",
         "import/no-unresolved": "off",
-        "no-irregular-whitespace": "off",
-        "prettier/prettier": [
-            "error",
-            {
-                "singleQuote": true,
-                "trailingComma": "all",
-                "arrowParens": "avoid",
-                "semi": false
-            }
-        ]
+        "no-irregular-whitespace": "off"
     },
     "settings": {
         "react": {
