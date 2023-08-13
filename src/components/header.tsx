@@ -10,10 +10,10 @@ import {
     Toolbar,
     SwipeableDrawer,
     List,
-    makeStyles,
     Divider,
-} from '@material-ui/core'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+} from '@mui/material'
+import { makeStyles } from '@mui/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 const useStyles = makeStyles({
     paper: {
