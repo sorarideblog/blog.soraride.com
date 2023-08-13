@@ -48,21 +48,25 @@ body {
                 border-radius: 0.5rem;
                 border: solid dimgray 1px;
 
-                p {
-                    font-size: 1rem;
+                h3 {
+                    margin: 0.5rem;
+                }
+
+                .createdAt {
+                    font-size: 0.8rem;
+                    color: gray;
+                    text-align: right;
+                }
+
+                .description {
+                    font-size: 0.9rem;
+                    color: rgb(87, 87, 87);
+                    text-align: left;
                 }
             }
         }
     }
 }
-
-// .post {
-//   padding: 1rem;
-//   padding-top: 0;
-//   background-color: white;
-//   border-radius: 0.5rem;
-//   border: solid dimgray 1px;
-// }
 
 .navbar-light .navbar-toggler {
     border: none;

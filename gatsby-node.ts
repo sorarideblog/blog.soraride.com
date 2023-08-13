@@ -17,6 +17,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
                                 locale: "ja-JP"
                                 formatString: "YYYY年MM月DD日"
                             )
+                            createdAt(
+                                locale: "ja-JP"
+                                formatString: "YYYY年MM月DD日"
+                            )
                             postTitle
                             id
                             body {

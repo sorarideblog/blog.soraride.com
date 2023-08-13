@@ -23,7 +23,10 @@ const Page: FC<QueryDataType> = ({ data }) => {
                                 <Link to={'/post/' + node.slug}>
                                     <div className='post'>
                                         <h3>{node.postTitle}</h3>
-                                        <div>
+                                        <div className='createdAt'>
+                                            {node.createdAt}
+                                        </div>
+                                        <div className='description'>
                                             {node.description.description}
                                         </div>
                                     </div>
@@ -51,7 +54,7 @@ export const query = graphql`
             edges {
                 node {
                     updatedAt
-                    createdAt
+                    createdAt(locale: "ja-JP", formatString: "YYYY年MM月DD日")
                     postTitle
                     id
                     slug
