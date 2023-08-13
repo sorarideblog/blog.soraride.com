@@ -69,7 +69,7 @@ export const Footer: FC = () => {
                 </div>
             </div>
             <div id='copy'>
-                <p>&copy; 2021 Sorarideblog</p>
+                <p>&copy; 2021-2023 Soraride</p>
             </div>
         </footer>
     )
