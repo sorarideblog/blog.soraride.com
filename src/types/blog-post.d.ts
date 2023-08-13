@@ -1,5 +1,6 @@
 export type BlogPostNode = {
     updatedAt: string
+    createdAt: string
     id: string
     body: {
         childMarkdownRemark: {
