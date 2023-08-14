@@ -48,21 +48,56 @@ body {
                 border-radius: 0.5rem;
                 border: solid dimgray 1px;
 
-                p {
-                    font-size: 1rem;
+                h3 {
+                    margin: 0.5rem;
+                }
+
+                .createdAt {
+                    font-size: 0.8rem;
+                    color: gray;
+                    text-align: right;
+                }
+
+                .description {
+                    font-size: 0.9rem;
+                    color: rgb(87, 87, 87);
+                    text-align: left;
                 }
             }
         }
     }
 }
 
-// .post {
-//   padding: 1rem;
-//   padding-top: 0;
-//   background-color: white;
-//   border-radius: 0.5rem;
-//   border: solid dimgray 1px;
-// }
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+
+    ul {
+        display: flex;
+        padding-left: 0;
+    }
+
+    li {
+        list-style-type: none;
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        border: solid dimgray 1px;
+        cursor: pointer;
+
+        &.active {
+            background-color: #52636d;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+    }
+}
 
 .navbar-light .navbar-toggler {
     border: none;

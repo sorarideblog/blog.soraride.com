@@ -11,7 +11,7 @@ type PostProps = {
 
 // gatsby-node.jsでgraphqlで取得したデータが流し込まれる
 const Post: FC<PostProps> = ({ pageContext }) => {
-    const { postTitle, updatedAt } = pageContext.node
+    const { postTitle, updatedAt, createdAt } = pageContext.node
     const description = pageContext.node.description.description
     const body = pageContext.node.body.childMarkdownRemark.html
 
@@ -24,7 +24,8 @@ const Post: FC<PostProps> = ({ pageContext }) => {
             <div className='post-area'>
                 <div className='post-header'>
                     <h2>{postTitle}</h2>
-                    <p className='post-date'>{updatedAt}</p>
+                    <div className='post-date'>更新 {updatedAt}</div>
+                    <div className='post-date'>投稿 {createdAt}</div>
                 </div>
                 <article>
                     <div
