@@ -1,6 +1,7 @@
 import type { GatsbyNode } from 'gatsby'
 import path from 'path'
 import type { BlogPost } from 'src/types/blog-post'
+import { paginate } from 'gatsby-awesome-pagination'
 
 export const createPages: GatsbyNode['createPages'] = async ({
     graphql,
@@ -52,5 +53,14 @@ export const createPages: GatsbyNode['createPages'] = async ({
             component: path.resolve('./src/templates/post.tsx'),
             context: edge,
         })
+    })
+
+    paginate({
+        createPage,
+        items: edges,
+        itemsPerPage: 10,
+        pathPrefix: ({ pageNumber }: { pageNumber: number }) =>
+            pageNumber === 0 ? '/' : '/page',
+        component: path.resolve('./src/templates/index.tsx'),
     })
 }
