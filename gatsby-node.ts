@@ -58,7 +58,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     paginate({
         createPage,
         items: edges,
-        itemsPerPage: 1,
+        itemsPerPage: 10,
         pathPrefix: ({ pageNumber }: { pageNumber: number }) =>
             pageNumber === 0 ? '/' : '/page',
         component: path.resolve('./src/templates/index.tsx'),
