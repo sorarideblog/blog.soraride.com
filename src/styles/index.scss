@@ -68,6 +68,37 @@ body {
     }
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+
+    ul {
+        display: flex;
+        padding-left: 0;
+    }
+
+    li {
+        list-style-type: none;
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        border: solid dimgray 1px;
+        cursor: pointer;
+
+        &.active {
+            background-color: #52636d;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+    }
+}
+
 .navbar-light .navbar-toggler {
     border: none;
 
