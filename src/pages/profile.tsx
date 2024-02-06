@@ -13,7 +13,7 @@ const Page: FC = ({ data }: any) => (
                 <h2>プロフィール</h2>
                 <StaticImage
                     className='profile-img'
-                    src='../images/2021-06-13_18-40-37_985.jpeg'
+                    src='../images/profile.jpg'
                     alt='プロフィール画像'
                     width={100}
                 />
@@ -27,11 +27,6 @@ const Page: FC = ({ data }: any) => (
                     <p>こんにちは。</p>
                 </div>
             </div>
-
-            {/* <div id="career">
-        <h2>業務経歴</h2>
-        <div></div>
-      </div> */}
         </article>
     </Layout>
 )
